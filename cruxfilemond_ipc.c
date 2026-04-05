@@ -35,8 +35,7 @@ size_t option(char *opt) {
 void dump_log(void) {
   FILE *fp_log = fopen(LOG_FILE, "rb");
   if (!fp_log) {
-    fprintf(stderr, "Failed to open '%s' log file: %s\n", LOG_FILE,
-            strerror(errno));
+    fprintf(stderr, "Failed to open '%s' log file: %s\n", LOG_FILE, strerror(errno));
     return;
   }
   while (1) {
@@ -91,7 +90,6 @@ int main(int argc, char *argv[]) {
     return CUSTOM_ERR;
   }
 
-  fprintf(stdout, "signal %ld sent to PID: %d!!\n", sig_to_send,
-          pid_cruxfilemond);
+  fprintf(stdout, "signal %ld sent to PID: %d!!\n", sig_to_send, pid_cruxfilemond);
   return EXIT_SUCCESS;
 }
