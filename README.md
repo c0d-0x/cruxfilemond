@@ -1,8 +1,8 @@
-# h4shfsmon: Linux File System Monitoring Daemon
+# A Linux File System Monitoring Daemon
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue.svg) ![License](https://img.shields.io/badge/license-MIT-green) ![Status](https://img.shields.io/badge/status-active-brightgreen)
 
-h4shfsmon is a lightweight file system monitoring daemon built for Linux using the fanotify API. It tracks file access and modification events within specified directories, providing users with detailed logs of filesystem activity in real time.
+It is a lightweight file system monitoring daemon built for Linux using the fanotify API. It tracks file access and modification events within specified directories, providing users with detailed logs of filesystem activity in real time.
 
 ## Features
 
@@ -20,28 +20,12 @@ Support for nested directory monitoring.
 - Enhanced logging with user-defined log formats and event types.
 - Config file monitoring and reloading on the fly.
 
-## Table of Contents
-
-- Installation
-- Usage
-- Configuration
-- Logging
-- Signals
-- Performance
-- Contributing
-- License
-
 ## Installation
 
 Clone the repository:
 
 ```bash
 git clone https://github.com/c0d-0x/h4shfsmon.git
-```
-
-### Build the project:
-
-```bash
 cd h4shfsmon
 mkdir bin
 mkdir .config ## for configuration
@@ -88,8 +72,6 @@ h4shfsmon logs events such as file accesses and modifications. The log output in
 
 ## Signals
 
-h4shfsmon responds to the following signals:
-
 - SIGTERM: Gracefully shuts down the daemon.
 
 ## How it Works
@@ -108,7 +90,7 @@ h4shfsmon responds to the following signals:
 
 ## Performance
 
-h4shfsmon is optimized for lightweight monitoring of directories. For larger systems with many files, the following performance improvements are planned:
+It is optimized for lightweight monitoring of directories and mount points. For larger systems with many files, the following performance improvements are planned:
 
 - Recursive directory monitoring to track nested directories.
 - Batch event processing to reduce resource consumption under high load.
