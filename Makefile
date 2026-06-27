@@ -1,8 +1,9 @@
 CC             := gcc
 
-CFLAGS         := -Wall -Wextra -Wformat-security -Wformat-overflow=2 #-ggdb
-CFLAGS += -O3 -s # strip bin
+CFLAGS         := -Wall -Wextra -Wformat-security -Wformat-overflow=2
+# CFLAGS += -O3 -s # strip & optimize
 # Debugging params 
+CFLAGS += -ggdb
 CFLAGS += -fsanitize=address
 CFLAGS += -fno-omit-frame-pointer
 CFLAGS += -fsanitize-recover=address
@@ -18,11 +19,9 @@ ALL_SRC        := $(SRC) $(CONF) $(EVENT)
 
 OBJ            := $(ALL_SRC:src/%.c=build/%.o)
 
-BIN            := bin/cruxfilemond
-BIN_NAME	   := cruxfilemond
-CRX_MSG        := cruxfilemond_ipc
+BIN            := bin/h4shfsmon
+BIN_NAME	   :=h4shfsmon 
 
-PREFIX         := /usr/
 all: $(BIN)
 	@echo '[+] Build complete (dev).'
 

@@ -20,4 +20,5 @@
 
 [directories]
 path ...
+
 [files]

@@ -1,7 +1,6 @@
 #ifndef DAEMONZ_H
 #define DAEMONZ_H
 
-#include <signal.h>
 #include <stdlib.h>
 #include <sys/stat.h>
 #include <sys/types.h>
